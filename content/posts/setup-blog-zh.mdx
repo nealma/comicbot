@@ -1,0 +1,74 @@
+---
+title: "我们是怎么搭建这个博客的"
+description: "分享我们用 Next.js、Tailwind CSS 和 Velite 搭建这个博客的过程。从零开始，一步步构建一个现代化的静态博客。"
+date: 2026-02-12
+locale: zh
+tags: ["Next.js", "教程", "Tailwind CSS"]
+categories: ["技术"]
+author: "码上同行"
+published: true
+---
+
+## 选择技术栈
+
+搭建博客的第一步是选择合适的工具。我们选择了：
+
+| 工具 | 用途 |
+|------|------|
+| Next.js 15 | React 框架 |
+| Tailwind CSS | 样式系统 |
+| Velite | MDX 内容管理 |
+| GitHub Pages | 免费部署 |
+
+## 为什么选这些？
+
+### Next.js
+
+Next.js 是目前最流行的 React 框架之一，它支持**静态导出**，这意味着我们可以把博客部署到 GitHub Pages 上，完全免费！
+
+```bash
+# 创建项目
+pnpm create next-app@latest comicbot --typescript --tailwind
+```
+
+### Velite
+
+Velite 是一个轻量级的内容管理工具，它可以把 MDX 文件转换成类型安全的数据：
+
+```typescript title="velite.config.ts"
+import { defineConfig, defineCollection, s } from "velite";
+
+const posts = defineCollection({
+  name: "Post",
+  pattern: "posts/**/*.mdx",
+  schema: s.object({
+    title: s.string(),
+    date: s.isodate(),
+    locale: s.enum(["zh", "en"]),
+    body: s.mdx(),
+  }),
+});
+```
+
+### Tailwind CSS
+
+Tailwind 让写样式变得超级简单。看看这个按钮：
+
+```html
+<button class="bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded-lg">
+  点击我
+</button>
+```
+
+> 💡 **给初学者的提示**: 不要被这么多工具吓到！每个工具都是为了让开发更简单。我们会在后续文章中详细介绍每一个。
+
+## 下一步
+
+在下一篇文章中，我们会详细介绍如何：
+
+1. 配置 MDX 内容系统
+2. 添加代码高亮
+3. 实现深色模式
+4. 部署到 GitHub Pages
+
+**敬请期待！** ✨

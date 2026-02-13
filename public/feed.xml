@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>码上同行 - Code Journey Together</title>
+    <link>https://nealma.github.io/comicbot</link>
+    <description>A father-daughter tech blog about coding adventures</description>
+    <language>zh-CN</language>
+    <atom:link href="https://nealma.github.io/comicbot/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Hello, World! Our Coding Journey Begins</title>
+      <link>https://nealma.github.io/comicbot/blog/hello-world-en</link>
+      <description>Welcome to Code Journey Together! This is a blog where a father and daughter explore the world of programming together. We&apos;ll share what we learn, our projects, and fun tech stories.</description>
+      <pubDate>Fri, 13 Feb 2026 00:00:00 GMT</pubDate>
+      <guid>https://nealma.github.io/comicbot/blog/hello-world-en</guid>
+    </item>
+    <item>
+      <title>你好，世界！我们的编程之旅开始了</title>
+      <link>https://nealma.github.io/comicbot/blog/hello-world-zh</link>
+      <description>欢迎来到码上同行！这是一个父亲和女儿一起探索编程世界的博客。在这里，我们会分享学习心得、项目经验和技术趣事。</description>
+      <pubDate>Fri, 13 Feb 2026 00:00:00 GMT</pubDate>
+      <guid>https://nealma.github.io/comicbot/blog/hello-world-zh</guid>
+    </item>
+    <item>
+      <title>How We Built This Blog</title>
+      <link>https://nealma.github.io/comicbot/blog/setup-blog-en</link>
+      <description>Sharing our journey of building this blog with Next.js, Tailwind CSS, and Velite. From scratch, step by step, creating a modern static blog.</description>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 GMT</pubDate>
+      <guid>https://nealma.github.io/comicbot/blog/setup-blog-en</guid>
+    </item>
+    <item>
+      <title>我们是怎么搭建这个博客的</title>
+      <link>https://nealma.github.io/comicbot/blog/setup-blog-zh</link>
+      <description>分享我们用 Next.js、Tailwind CSS 和 Velite 搭建这个博客的过程。从零开始，一步步构建一个现代化的静态博客。</description>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 GMT</pubDate>
+      <guid>https://nealma.github.io/comicbot/blog/setup-blog-zh</guid>
+    </item>
+  </channel>
+</rss>

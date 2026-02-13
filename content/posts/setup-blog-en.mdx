@@ -1,0 +1,74 @@
+---
+title: "How We Built This Blog"
+description: "Sharing our journey of building this blog with Next.js, Tailwind CSS, and Velite. From scratch, step by step, creating a modern static blog."
+date: 2026-02-12
+locale: en
+tags: ["Next.js", "tutorial", "Tailwind CSS"]
+categories: ["tech"]
+author: "Code Journey Together"
+published: true
+---
+
+## Choosing Our Tech Stack
+
+The first step of building a blog is choosing the right tools. We picked:
+
+| Tool | Purpose |
+|------|---------|
+| Next.js 15 | React framework |
+| Tailwind CSS | Styling system |
+| Velite | MDX content management |
+| GitHub Pages | Free deployment |
+
+## Why These Tools?
+
+### Next.js
+
+Next.js is one of the most popular React frameworks. It supports **static export**, which means we can deploy our blog to GitHub Pages for free!
+
+```bash
+# Create the project
+pnpm create next-app@latest comicbot --typescript --tailwind
+```
+
+### Velite
+
+Velite is a lightweight content management tool that converts MDX files into type-safe data:
+
+```typescript title="velite.config.ts"
+import { defineConfig, defineCollection, s } from "velite";
+
+const posts = defineCollection({
+  name: "Post",
+  pattern: "posts/**/*.mdx",
+  schema: s.object({
+    title: s.string(),
+    date: s.isodate(),
+    locale: s.enum(["zh", "en"]),
+    body: s.mdx(),
+  }),
+});
+```
+
+### Tailwind CSS
+
+Tailwind makes writing styles super easy. Check out this button:
+
+```html
+<button class="bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded-lg">
+  Click me
+</button>
+```
+
+> 💡 **Tip for beginners**: Don't be intimidated by all these tools! Each one is designed to make development easier. We'll cover each in detail in upcoming posts.
+
+## What's Next
+
+In our next posts, we'll cover how to:
+
+1. Configure the MDX content system
+2. Add code syntax highlighting
+3. Implement dark mode
+4. Deploy to GitHub Pages
+
+**Stay tuned!** ✨

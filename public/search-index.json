@@ -1,0 +1,56 @@
+[
+  {
+    "slug": "hello-world-en",
+    "title": "Hello, World! Our Coding Journey Begins",
+    "description": "Welcome to Code Journey Together! This is a blog where a father and daughter explore the world of programming together. We'll share what we learn, our projects, and fun tech stories.",
+    "locale": "en",
+    "tags": [
+      "beginner",
+      "journal"
+    ],
+    "categories": [
+      "diary"
+    ]
+  },
+  {
+    "slug": "hello-world-zh",
+    "title": "你好，世界！我们的编程之旅开始了",
+    "description": "欢迎来到码上同行！这是一个父亲和女儿一起探索编程世界的博客。在这里，我们会分享学习心得、项目经验和技术趣事。",
+    "locale": "zh",
+    "tags": [
+      "入门",
+      "心得"
+    ],
+    "categories": [
+      "日记"
+    ]
+  },
+  {
+    "slug": "setup-blog-en",
+    "title": "How We Built This Blog",
+    "description": "Sharing our journey of building this blog with Next.js, Tailwind CSS, and Velite. From scratch, step by step, creating a modern static blog.",
+    "locale": "en",
+    "tags": [
+      "Next.js",
+      "tutorial",
+      "Tailwind CSS"
+    ],
+    "categories": [
+      "tech"
+    ]
+  },
+  {
+    "slug": "setup-blog-zh",
+    "title": "我们是怎么搭建这个博客的",
+    "description": "分享我们用 Next.js、Tailwind CSS 和 Velite 搭建这个博客的过程。从零开始，一步步构建一个现代化的静态博客。",
+    "locale": "zh",
+    "tags": [
+      "Next.js",
+      "教程",
+      "Tailwind CSS"
+    ],
+    "categories": [
+      "技术"
+    ]
+  }
+]

@@ -1,0 +1,65 @@
+{
+  "site": {
+    "title": "码上同行",
+    "subtitle": "Code Journey Together",
+    "description": "A father-daughter coding adventure blog"
+  },
+  "nav": {
+    "home": "Home",
+    "blog": "Blog",
+    "tags": "Tags",
+    "categories": "Categories",
+    "about": "About",
+    "search": "Search"
+  },
+  "home": {
+    "hero": "Code Journey Together",
+    "heroSub": "A blog where a father and daughter learn to code, build projects, and explore the world of technology together",
+    "latestPosts": "Latest Posts",
+    "viewAll": "View All",
+    "readMore": "Read More"
+  },
+  "blog": {
+    "title": "All Posts",
+    "noPosts": "No posts yet",
+    "readingTime": "min read",
+    "publishedOn": "Published on",
+    "updatedOn": "Updated on",
+    "tableOfContents": "Table of Contents",
+    "tags": "Tags",
+    "categories": "Categories",
+    "prev": "Previous",
+    "next": "Next",
+    "comments": "Comments"
+  },
+  "tags": {
+    "title": "Tags",
+    "postsTagged": "posts"
+  },
+  "categories": {
+    "title": "Categories",
+    "postsInCategory": "posts"
+  },
+  "about": {
+    "title": "About Us",
+    "content": "We are a father-daughter duo who love technology. Dad is a programmer, and daughter is a curious middle schooler fascinated by coding. 'Code Journey Together' is our record of learning and exploring the tech world side by side."
+  },
+  "search": {
+    "placeholder": "Search posts...",
+    "noResults": "No posts found",
+    "title": "Search"
+  },
+  "footer": {
+    "builtWith": "Built with ❤️ and code",
+    "copyright": "Code Journey Together"
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "language": {
+    "zh": "中文",
+    "en": "English"
+  }
+}
