@@ -7,7 +7,8 @@ import { Search, X, Command, FileText } from "lucide-react";
 // eslint-disable-next-line @typescript-eslint/no-require-imports
 import FlexSearchModule from "flexsearch";
 
-const BASE_PATH = "/comicbot";
+// basePath for non-Link URLs (fetch, img) — Link components auto-prefix
+const ASSET_BASE = "/comicbot";
 
 interface SearchResult {
   slug: string;
@@ -79,7 +80,7 @@ function SearchDialog({ open, onClose }: SearchDialogProps) {
 
     const loadIndex = async () => {
       try {
-        const res = await fetch(`${BASE_PATH}/search-index.json`);
+        const res = await fetch(`${ASSET_BASE}/search-index.json`);
         const data: SearchIndexEntry[] = await res.json();
         setEntries(data);
 
@@ -217,7 +218,7 @@ function SearchDialog({ open, onClose }: SearchDialogProps) {
                 {results.map((result, i) => (
                   <li key={result.slug}>
                     <Link
-                      href={`${BASE_PATH}/blog/${result.slug}`}
+                      href={`/blog/${result.slug}`}
                       className={`flex items-start gap-3 px-4 py-3 transition-colors ${
                         i === selectedIndex
                           ? "bg-primary-50 dark:bg-primary-950/50"

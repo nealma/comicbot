@@ -33,14 +33,14 @@ export function HomeContent({ posts }: { posts: Post[] }) {
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link
-              href="/comicbot/blog"
+              href="/blog"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-primary-600 hover:bg-primary-700 text-white font-medium transition-all hover:shadow-lg hover:shadow-primary-500/25"
             >
               {t("home.viewAll")}
               <ArrowRight className="w-4 h-4" />
             </Link>
             <Link
-              href="/comicbot/about"
+              href="/about"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:border-primary-300 dark:hover:border-primary-700 font-medium transition-all hover:shadow-lg"
             >
               <Heart className="w-4 h-4 text-coral-500" />
@@ -57,7 +57,7 @@ export function HomeContent({ posts }: { posts: Post[] }) {
             {t("home.latestPosts")}
           </h2>
           <Link
-            href="/comicbot/blog"
+            href="/blog"
             className="inline-flex items-center gap-1 text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 font-medium transition-colors"
           >
             {t("home.viewAll")}

@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 
-const BASE_PATH = "/comicbot";
 
 interface TagBadgeProps {
   tag: string;
@@ -26,7 +25,7 @@ export function TagBadge({ tag, link = false, count }: TagBadgeProps) {
   if (link) {
     return (
       <Link
-        href={`${BASE_PATH}/tags/${encodeURIComponent(tag)}`}
+        href={`/tags/${encodeURIComponent(tag)}`}
         className="inline-block"
       >
         {badge}

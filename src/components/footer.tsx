@@ -4,8 +4,6 @@ import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { Rss } from "lucide-react";
 
-const BASE_PATH = "/comicbot";
-
 export function Footer() {
   const t = useTranslations("footer");
   const currentYear = new Date().getFullYear();
@@ -26,7 +24,7 @@ export function Footer() {
 
           {/* RSS Link */}
           <Link
-            href={`${BASE_PATH}/feed.xml`}
+            href="/feed.xml"
             className="flex items-center gap-1.5 text-sm text-gray-500 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
             aria-label="RSS Feed"
           >

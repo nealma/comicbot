@@ -8,8 +8,6 @@ import { ThemeSwitch } from "@/components/theme-switch";
 import { LanguageSwitch } from "@/components/language-switch";
 import { SearchButton } from "@/components/search-dialog";
 
-const BASE_PATH = "/comicbot";
-
 interface NavItem {
   key: string;
   href: string;
@@ -65,7 +63,7 @@ export function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link
-            href={`${BASE_PATH}/`}
+            href="/"
             className="flex items-center gap-2 text-xl font-bold text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors"
           >
             <span className="text-2xl">&#x1F4BB;</span>
@@ -77,7 +75,7 @@ export function Header() {
             {navItems.map((item) => (
               <Link
                 key={item.key}
-                href={`${BASE_PATH}${item.href}`}
+                href={item.href}
                 className="px-3 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 rounded-lg hover:bg-primary-50 dark:hover:bg-primary-950/50 transition-all"
               >
                 {t(item.key)}
@@ -137,7 +135,7 @@ export function Header() {
               {navItems.map((item) => (
                 <Link
                   key={item.key}
-                  href={`${BASE_PATH}${item.href}`}
+                  href={item.href}
                   className="px-4 py-3 text-base font-medium text-gray-700 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-400 rounded-lg hover:bg-primary-50 dark:hover:bg-primary-950/50 transition-all"
                   onClick={() => setMobileMenuOpen(false)}
                 >

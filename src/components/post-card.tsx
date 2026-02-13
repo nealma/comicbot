@@ -7,14 +7,12 @@ import { TagBadge } from "@/components/tag-badge";
 import { formatDate } from "@/lib/utils";
 import type { Post } from "@/lib/content";
 
-const BASE_PATH = "/comicbot";
-
 export function PostCard({ post }: { post: Post }) {
   const t = useTranslations("blog");
   const { title, description, date, tags, slugAsParams, readingTime, locale, cover } = post;
 
   return (
-    <Link href={`${BASE_PATH}/blog/${slugAsParams}`} className="group block">
+    <Link href={`/blog/${slugAsParams}`} className="group block">
       <article className="h-full rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 overflow-hidden shadow-sm hover:shadow-lg hover:shadow-primary-500/10 dark:hover:shadow-primary-400/5 transition-all duration-300 hover:-translate-y-1">
         {cover && (
           <div className="aspect-video overflow-hidden bg-gray-100 dark:bg-gray-800">
