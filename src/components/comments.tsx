@@ -13,9 +13,9 @@ interface CommentsProps {
 
 export function Comments({
   repo = "nealma/comicbot",
-  repoId = "placeholder",
+  repoId = "R_kgDORPibzA",
   category = "Announcements",
-  categoryId = "placeholder",
+  categoryId = "DIC_kwDORPibzM4C2Xrh",
 }: CommentsProps) {
   const { resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
