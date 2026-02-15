@@ -14,10 +14,8 @@ const sharedComponents = {
 
 function useMDXComponent(code: string) {
   const fn = useMemo(() => {
-    const scope = { ...runtime };
     try {
-      const fn = new Function("_components", ...Object.keys(scope), code);
-      return fn;
+      return new Function(code);
     } catch {
       return null;
     }
@@ -30,11 +28,13 @@ export function MDXContent({ code }: MDXContentProps) {
   if (!Component) return null;
 
   try {
-    const content = Component(sharedComponents, ...Object.values(runtime));
-    if (typeof content === "function") {
-      return content({ components: sharedComponents });
+    // Velite's compiled MDX uses arguments[0] to destructure {Fragment, jsx, jsxs}
+    const result = Component(runtime);
+    // result = {default: function(props)}
+    if (result && typeof result.default === "function") {
+      return result.default({ components: sharedComponents });
     }
-    return content;
+    return null;
   } catch {
     return <p>Error rendering content</p>;
   }
